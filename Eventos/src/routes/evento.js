@@ -18,3 +18,10 @@ router.get("/mostrarUsuario", (req, res) => {
       .catch((error) => res.json({ message: error }));
   });
 
+  router.get("/mostrarUsuario/:id", (req, res) => {
+    const { id } = req.params;
+    eventoSchema
+        .findById(id)
+        .then((data) => res.json(data))
+        .catch((error) => res.json({ message: error }));
+}); 
