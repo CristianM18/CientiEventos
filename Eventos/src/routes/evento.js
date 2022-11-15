@@ -11,3 +11,10 @@ router.post("/crearUsuario", (req, res) => {
         .then((data) => res.json(data))
         .catch((error) => res.json({ message: error }));
 });
+
+router.get("/mostrarUsuario", (req, res) => {
+    eventoSchema.find()
+      .then((data) => res.json(data))
+      .catch((error) => res.json({ message: error }));
+  });
+
